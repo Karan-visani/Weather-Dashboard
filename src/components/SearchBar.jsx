@@ -4,7 +4,7 @@ const SearchBar = ({onSearch,setUnit}) => {
     const [city, setCity] = useState("")
     const searchHandler = (e) =>{
         e.preventDefault()
-       onSearch(city)
+       onSearch(city, () => setCity(""))
     }
     
   return (

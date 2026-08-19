@@ -16,7 +16,7 @@ const App = () => {
 
     
 
-    const searchHandle = async (city) => {
+    const searchHandle = async (city,clearInput) => {
         setLoading(true)
         setError("")
 
@@ -50,9 +50,9 @@ const App = () => {
 
             setCities(prev => [...prev, newCity])
             setSelectedCity(newCity)
+            clearInput()
 
         } catch (error) {
-            console.log(error)
             setError("City not found")
         } finally {
             setLoading(false)
