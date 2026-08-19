@@ -9,7 +9,7 @@ html , body{
     background-color: white;
 }
 .heading{
-  font-size: xxx-large;
+  font-size: xx-large;
   text-align: center;
   padding: 15px;
   margin: 8px;
@@ -42,6 +42,17 @@ html , body{
   font-size: large;
 }
 
+.btnDegree{
+  border:2px solid black;
+  outline : none;
+  border-radius: 10px;
+  padding:3px 10px 3px 10px;
+  font-size: large;
+}
+
+.btnDegree:active{
+  transform: scale(101%);
+}
 .btnSearch:active{
   transform: scale(101%);
 }
@@ -53,8 +64,8 @@ html , body{
 .weatherCard{
   border-radius: 20px;
   box-shadow: 2px 2px 7px  black;
-  height: 380px;
-  width: 350px;
+  height: 360px;
+  width: 300px;
   margin: 0px 20px 20px 20px;
   border-radius: 15px;
   padding: 15px;
@@ -162,7 +173,13 @@ color:rgb(70, 68, 68);
 .forecastCards{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-top:40px;
+}
+
+.FCS{
+  border-top: 1px solid black;
+
 }
 
 .forecast{
@@ -202,6 +219,21 @@ color:rgb(70, 68, 68);
 .tempFC{
   display: flex;
   justify-content: center;
-  font-size: x-large;
-  border-top: 1px solid rgb(121, 119, 119);
+  font-size: larger;
+  margin-top: 8px;
+}
+
+.tempFCH{
+    border-top: 1px solid rgb(121, 119, 119);
+}
+
+.WCS{
+  display: flex;
+  gap: 10px;
+}
+
+.btnDelete{
+  border-radius: 10px;
+  padding:5px;
+  font-size: large;
 }

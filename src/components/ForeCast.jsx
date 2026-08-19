@@ -2,7 +2,7 @@ import React from 'react'
 import { IoRainy } from 'react-icons/io5';
 import { MdAcUnit, MdCloud, MdCloudQueue, MdGrain, MdSunny, MdThunderstorm } from 'react-icons/md';
 
-const ForeCast = ({daily}) => {
+const ForeCast = ({daily,unit,city}) => {
     const getWeatherDescription = (code) => {
     if (code === 0) return "Clear sky";
     if (code === 1) return "Mainly clear";
@@ -17,6 +17,8 @@ const ForeCast = ({daily}) => {
     if ([95, 96, 99].includes(code)) return "Thunderstorm";
     return "Unknown";
 }
+
+
     
     const getWeatherIcon = (code) => {
         if (code === 0) {
@@ -47,7 +49,8 @@ const ForeCast = ({daily}) => {
     }
   return (
     <div className='forecastCards'>
-      {daily.time.map((date,index)=>{
+        <h2>{city.name}'s Daily Forecast</h2>
+      {daily.time.slice(0,5).map((date,index)=>{
         return <div key={index} className='forecast'>
             <div className='topFC'>
                 <h2>Day {index+1}</h2>
@@ -59,9 +62,9 @@ const ForeCast = ({daily}) => {
             <h3>{getWeatherDescription(daily.weather_code[index])}</h3>
             </div>
 
-            <div>
+            <div className='tempFCH'>
                 <h2 className='tempFC'>
-                    {daily.temperature_2m_max[index]}° / {daily.temperature_2m_min[index]}° 
+                    {unit === "C" ? daily.temperature_2m_max[index] : ((daily.temperature_2m_max[index]* 9 / 5) + 32)}°{unit} / {unit === "C" ? daily.temperature_2m_min[index] : ((daily.temperature_2m_min[index]* 9 / 5) + 32)}°{unit} 
                 </h2>
             </div>
         </div>

@@ -2,10 +2,12 @@ import {EllipsisVertical} from 'lucide-react'
 import React from 'react'
 import { BsDroplet } from 'react-icons/bs'
 import { FaWind } from 'react-icons/fa'
+import { IoRainy } from 'react-icons/io5'
 
 import {MdSunny,MdCloud,MdCloudQueue,MdGrain,MdThunderstorm,MdAcUnit} from 'react-icons/md'
+import { RiDeleteBin5Line } from 'react-icons/ri'
 
-const WeatherCard = ({data}) => { 
+const WeatherCard = ({data,unit,city,onSelect,onRemove}) => { 
 const getWeatherDescription = (code) => {
     if (code === 0) return "Clear sky";
     if (code === 1) return "Mainly clear";
@@ -50,18 +52,21 @@ const getWeatherIcon = (code) => {
 }
        
   return (
-    <div className='weatherCard'>
+    <div className='weatherCard' onClick={onSelect}>
         <div className='topWC'>
             <div className='location'>
-            <h2>{data.city}</h2>
-            <h4>{data.country}</h4>
+            <h2>{city.name}</h2>
+            <h4>{city.country}</h4>
             </div>
-            <h1><EllipsisVertical /></h1>
+            <button className='btnDelete' onClick={(e) => {
+        e.stopPropagation()
+        onRemove()
+    }}><RiDeleteBin5Line color='red' size={20}/></button>
         </div>
 
         <div className='middleWC'>
         <h2 className='weatherIcon'>{getWeatherIcon(data.current.weather_code)}</h2>
-        <h1>{data.current.temperature_2m} °C</h1>
+        <h1>{unit === "C" ? data.current.temperature_2m : ((data.current.temperature_2m * 9 / 5) + 32) }°{unit}</h1>
         <h3>{getWeatherDescription(data.current.weather_code)}</h3>
         </div>
 
