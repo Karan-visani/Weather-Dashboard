@@ -59,6 +59,7 @@ html , body{
 
 .appLoaders{
   margin: 10px 0px 10px 17px;
+  font-size: 21px;
 }
 
 .weatherCard{

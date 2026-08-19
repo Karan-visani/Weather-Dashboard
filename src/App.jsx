@@ -29,6 +29,15 @@ const App = () => {
 
             const location = locationData.results[0]
 
+            const existingCity = cities.some(
+              item => item.city.id === location.id
+            )
+
+            if(existingCity){
+              setError("City already added")
+              return
+            }
+
             const weatherData = await getWeather(
                 location.latitude,
                 location.longitude
@@ -81,9 +90,9 @@ const App = () => {
                     setUnit={setUnit}
                 />
 
-                <div className='appLoaders'>
+                <div className='appLoaders'><b>
                     {loading && <p>Loading.......</p>}
-                    {error && <p>{error}</p>}
+                    {error && <p>{error}</p>}</b>
                 </div>
 
                 <div className='WCS'>
