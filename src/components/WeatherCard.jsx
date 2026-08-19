@@ -35,10 +35,10 @@ const getWeatherIcon = (code) => {
         return <MdCloud size={105} color="#94A3B8" />
     }
     if ([51, 53, 55, 56, 57].includes(code)) {
-        return <MdGrain size={105} color="#3B82F6" />
+        return <IoRainy size={105} color="#3B82F6" />
     }
     if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) {
-        return <MdGrain size={105} color="#2563EB" />
+        return <IoRainy size={105} color="#2563EB" />
     }
     if ([71, 73, 75, 77].includes(code)) {
         return <MdAcUnit size={105} color="#BAE6FD" />

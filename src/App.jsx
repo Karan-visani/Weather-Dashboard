@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import SearchBar from './components/searchBar'
 import { searchCity,getWeather } from './services/weatherApi';
 import WeatherCard from './components/WeatherCard';
+import ForeCast from './components/ForeCast';
 
 const App = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [weather, setWeather] = useState(null)
+  
 
   const searchHandle = async(city) =>{
     setLoading(true)
@@ -45,6 +47,7 @@ const App = () => {
     <div>
       <h2 className='heading'>Weather Dashboard</h2>
 
+      <div className='searchAndWc'>
       <SearchBar onSearch={searchHandle}/>
       <div className='appLoaders'>
       {loading && <p>Loading.......</p>}
@@ -53,8 +56,11 @@ const App = () => {
       {weather && (
                 <WeatherCard data={weather}/>
             )}
+      </div>
     
-    
+      {weather && (
+      <ForeCast daily={weather.daily}/>          
+      )}
 
     </div>
   )

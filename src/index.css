@@ -25,14 +25,13 @@ html , body{
   margin-left: 15px;
 }
 
-
-
 .inputSearch{
   border:2px solid black;
   outline : none;
   border-radius: 10px;
   font-size: large;
   padding: 6px 16px 6px 16px;
+  width: 700px;
 }
 
 .btnSearch{
@@ -54,14 +53,15 @@ html , body{
 .weatherCard{
   border-radius: 20px;
   box-shadow: 2px 2px 7px  black;
-  height: 350px;
-  width: 300px;
-  margin: 20px;
+  height: 380px;
+  width: 350px;
+  margin: 0px 20px 20px 20px;
   border-radius: 15px;
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .topWC{
@@ -149,4 +149,59 @@ html , body{
 
 .middleWC h3{
 color:rgb(70, 68, 68);
+}
+
+.searchAndWc{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  align-items: center; 
+}
+
+.forecastCards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.forecast{
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px  black;
+  height:210px;
+  width: 175px;
+  margin: 0px 20px 20px 20px;
+  border-radius: 15px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.topFC{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:rgb(70, 68, 68) ;
+  align-items: end;
+  font-size: small;
+  border-bottom: 1px solid  rgb(121, 119, 119) ;
+}
+
+
+
+.iconsFC{
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;
+
+}
+
+.tempFC{
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  border-top: 1px solid rgb(121, 119, 119);
 }
