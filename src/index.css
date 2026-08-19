@@ -47,4 +47,106 @@ html , body{
   transform: scale(101%);
 }
 
+.appLoaders{
+  margin: 10px 0px 10px 17px;
+}
 
+.weatherCard{
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px  black;
+  height: 350px;
+  width: 300px;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topWC{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+.topWC h1{
+  color: gray;
+}
+.location{
+  display: flex;
+  flex-direction: column;
+}
+
+.location h4{
+  color: rgb(43, 42, 42);
+  font-weight:20;
+}
+
+
+
+.bottomWC{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2px;
+  padding-top: 8px;
+  margin-top: 4px;
+  border-top: 1px solid rgb(161, 157, 157);
+  font-size: 15px;
+}
+
+.humidIcon{
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.humidity{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(70, 68, 68);
+}
+
+.iconsWC{
+  background:rgb(87, 170, 243,0.4);
+  padding: 8px;
+  color: rgb(31, 119, 251);
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.windIcon{
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.wind{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(70, 68, 68);
+}
+
+
+.middleWC{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.middleWC h1{
+  font-size: 40px;
+}
+
+.middleWC h3{
+color:rgb(70, 68, 68);
+}
