@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import SearchBar from './components/searchBar'
-import { searchCity,getWeather } from './services/weatherApi';
-import WeatherCard from './components/WeatherCard';
-import ForeCast from './components/ForeCast';
+import SearchBar from './components/SearchBar.jsx'
+import { searchCity,getWeather } from './services/weatherApi.js';
+import WeatherCard from './components/WeatherCard.jsx';
+import ForeCast from './components/ForeCast.jsx';
 
 const App = () => {
     const [loading, setLoading] = useState(false)
@@ -80,7 +80,7 @@ const App = () => {
 }
 
     return (
-        <div>
+        <div className='main'>
             <h2 className='heading'>Weather Dashboard</h2>
 
             <div className='searchAndWc'>

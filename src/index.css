@@ -53,6 +53,7 @@ html , body{
 .btnDegree:active{
   transform: scale(101%);
 }
+
 .btnSearch:active{
   transform: scale(101%);
 }
@@ -73,7 +74,7 @@ html , body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .topWC{
@@ -85,6 +86,7 @@ html , body{
 .topWC h1{
   color: gray;
 }
+
 .location{
   display: flex;
   flex-direction: column;
@@ -94,8 +96,6 @@ html , body{
   color: rgb(43, 42, 42);
   font-weight:20;
 }
-
-
 
 .bottomWC{
   display: flex;
@@ -144,7 +144,6 @@ html , body{
   color: rgb(70, 68, 68);
 }
 
-
 .middleWC{
   height: 100%;
   width: 100%;
@@ -167,7 +166,6 @@ color:rgb(70, 68, 68);
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-
   align-items: center; 
 }
 
@@ -175,12 +173,11 @@ color:rgb(70, 68, 68);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top:40px;
+  margin-top: 10px;
 }
 
 .FCS{
   border-top: 1px solid black;
-
 }
 
 .forecast{
@@ -194,27 +191,23 @@ color:rgb(70, 68, 68);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 .topFC{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color:rgb(70, 68, 68) ;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:rgb(70, 68, 68);
   align-items: end;
   font-size: small;
-  border-bottom: 1px solid  rgb(121, 119, 119) ;
+  border-bottom: 1px solid  rgb(121, 119, 119);
 }
-
-
 
 .iconsFC{
   display: flex;
   flex-direction: column;
   justify-content:center ;
   align-items: center;
-
 }
 
 .tempFC{
