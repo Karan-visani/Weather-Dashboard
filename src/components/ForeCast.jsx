@@ -64,7 +64,9 @@ const ForeCast = ({daily,unit,city}) => {
 
             <div className='tempFCH'>
                 <h2 className='tempFC'>
-                    {unit === "C" ? daily.temperature_2m_max[index] : ((daily.temperature_2m_max[index]* 9 / 5) + 32)}°{unit} / {unit === "C" ? daily.temperature_2m_min[index] : ((daily.temperature_2m_min[index]* 9 / 5) + 32)}°{unit} 
+                    {unit === "C" ? daily.temperature_2m_max[index] : ((daily.temperature_2m_max[index] * 9 / 5) + 32).toFixed(2)}°{unit}
+                    {" / "}
+                    {unit === "C" ? daily.temperature_2m_min[index] : ((daily.temperature_2m_min[index] * 9 / 5) + 32).toFixed(2)}°{unit}
                 </h2>
             </div>
         </div>
