@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const SearchBar = ({onSearch,setUnit}) => {
+const SearchBar = ({onSearch,setUnit,unit}) => {
     const [city, setCity] = useState("")
     const searchHandler = (e) =>{
         e.preventDefault()
@@ -23,14 +23,18 @@ const SearchBar = ({onSearch,setUnit}) => {
         type='submit'
         className='btnSearch'>Search</button>
 
-        <button 
-         onClick={() => setUnit("C")}
-        type='button'
-        className='btnDegree'>°C</button>
-        <button 
-         onClick={() => setUnit("F")}
-        type='button'
-        className='btnDegree'>°F</button>
+        <div className="unitToggle">
+    <span>°C</span>
+    <label className="switch">
+        <input
+            type="checkbox"
+            checked={unit === "F"}
+            onChange={() => setUnit(unit === "C" ? "F" : "C")}
+        />
+        <span className="slider"></span>
+    </label>
+    <span>°F</span>
+</div>
 
       </form>
   )

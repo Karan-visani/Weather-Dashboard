@@ -88,6 +88,8 @@ const App = () => {
                 <SearchBar
                     onSearch={searchHandle}
                     setUnit={setUnit}
+                    unit={unit}
+
                 />
 
                 <div className='appLoaders'><b>
